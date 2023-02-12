@@ -35,8 +35,13 @@ button {
   list-style: none;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
-  outline: 5px black solid;
+  /* outline: 5px black solid; */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -51,6 +56,8 @@ header .container {
   padding-top: 25px;
   padding-bottom: 25px;
   align-items: center;
+
+  border-bottom: 1px solid #ECECEC;
 }
 
 .logo {
@@ -136,9 +143,8 @@ header .container {
 }
 
 .hero h1 {
-  margin-top: 200px;
+  margin-top: 0;
   margin-bottom: 30px;
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -148,16 +154,12 @@ header .container {
   color: var(--about-h3-color);
 }
 
-.hero button {
-  margin-bottom: 200px;
-}
-
 /*Features*/
 
-.features .container {
+/* .features .container {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
 .features-list {
   display: flex;
@@ -200,10 +202,10 @@ header .container {
 
 /*About*/
 
-.about .container {
+/* .about .container {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
 .about .about-list {
   display: flex;
@@ -274,8 +276,8 @@ header .container {
 }
 
 .team .container {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
 
   background-color: var(--second-bg-color);
 }
@@ -337,10 +339,10 @@ header .container {
 
 /*Clients / Customers*/
 
-.customers .container {
+/* .customers .container {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
 .customers .customers-list {
   display: flex;

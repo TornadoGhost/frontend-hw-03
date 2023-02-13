@@ -10,14 +10,18 @@ body {
   margin: 0;
 
   font-family: Roboto, sans-serif;
-  color: var(--main-text-color);
-  letter-spacing: 0.03em;
-  background-color: var(--main-bg-color);
   font-size: 16px;
+  letter-spacing: 0.03em;
+
+  /* color: var(--main-text-color); */
+  /* background-color: var(--main-bg-color); */
 }
 
 a {
   text-decoration: none;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
 }
 
 p {
@@ -26,6 +30,9 @@ p {
 
 button {
   cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
 }
 
 .list {
@@ -49,6 +56,23 @@ button {
   margin-right: auto;
 }
 
+.studia-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 29px;
+  border-style: none;
+  border-radius: 4px;
+
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: var(--main-color);
+  background-color: var(--main-selection-color);
+}
+
 /*Header*/
 
 header .container {
@@ -63,6 +87,14 @@ header .container {
 .logo {
   margin-right: 86px;
 
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: #000000;
+}
+
+.logo-span {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -123,23 +155,6 @@ header .container {
 
 .hero {
   text-align: center;
-}
-
-.hero button {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  padding-right: 29px;
-  border-radius: 4px;
-  border-color: var(--main-selection-color);
-
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  color: var(--main-color);
-  background-color: var(--main-selection-color);
 }
 
 .hero h1 {
@@ -396,11 +411,40 @@ header .container {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  width: 610px;
 
   font-weight: 500;
   line-height: 1.62;
   text-align: center;
+}
+
+.group-list .group-button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
+
+  border-style: none;
+  border-radius: 4px;
+
+  font-weight: 500;
+  /* font-size: 16px; */
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--main-text-color);
+  background-color: var(--second-bg-color);
+}
+
+.group-list .group-button:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: var(--main-color);
+  background-color: var(--main-selection-color);
+}
+
+.group-list .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .group-list button {
@@ -417,6 +461,43 @@ header .container {
   background: var(--main-selection-color);
 }
 
+.projects-list .container {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 1206px; */
+}
+
+.projects-list .container .item {
+  width: calc(100%-30px / 3);
+  margin-bottom: 30px;
+
+  border: 1px solid #EEEEEE;
+}
+
+.projects-list .container .item:not(:last-child){
+  margin-right: 30px;
+}
+
+.projects-list .container .item:nth-child(3n) {
+  margin-right: 0; 
+}
+
+.projects-list .container .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.projects-list .item h2{
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+}
+
+.projects-list .item p{
+ margin-top: 0;
+ margin-bottom: 20px;
+ margin-left: 24px;
+}
+
 /*Footer*/
 
 footer {
@@ -425,19 +506,25 @@ footer {
 
 footer .container {
   display: flex;
-  justify-content: center;
-  padding-bottom: 60px;
+  justify-content: space-evenly;
+}
+
+footer .logo {
+  margin-right: 0;
 }
 
 footer .logo:visited,
 footer a.logo {
+  margin-top: 60px;
   color: var(--main-color);
 }
 
 .footer-address {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   margin-right: 69px;
   /* margin-bottom: 60px; */
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-address .address {
@@ -447,6 +534,7 @@ footer a.logo {
 
 .address p {
   margin-top: 20px;
+  margin-right: 0;
   margin-bottom: 9px;
 
   font-size: 14px;
@@ -463,8 +551,8 @@ footer a.logo {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address:last-child {
-  margin-top: 9px;
+.address a:not(:last-child){
+  margin-bottom: 9px;
 }
 
 .footer-socials {
@@ -503,13 +591,20 @@ footer a.logo {
 
 .footer-mailing input[type="email"] {
   margin-right: 12px;
-  padding: 0;
+  padding-top: 15px;
+  padding-right: 145px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   align-items: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.3);
 
   background-color: #2f303a;
 }
@@ -522,20 +617,7 @@ footer a.logo {
   margin-left: 10px;
 }
 
-.footer-mailing button {
+.footer-mailing .studia-button {
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  padding-right: 29px;
-  border-radius: 4px;
-  border-color: var(--main-selection-color) f3;
-
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  color: var(--main-color);
-  background-color: var(--main-selection-color);
+  align-items: center;
 }

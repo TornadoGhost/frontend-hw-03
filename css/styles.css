@@ -57,7 +57,7 @@ header .container {
   padding-bottom: 25px;
   align-items: center;
 
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -392,13 +392,12 @@ header .container {
 
 /*Portfolio*/
 
-.group-list button:hover,
-.group-list button:focus {
-  color: var(--main-color);
-  background: var(--main-selection-color);
-}
-
 .group-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 610px;
+
   font-weight: 500;
   line-height: 1.62;
   text-align: center;
@@ -410,6 +409,12 @@ header .container {
   text-align: center;
 
   background-color: var(--second-bg-color);
+}
+
+.group-list button:hover,
+.group-list button:focus {
+  color: var(--main-color);
+  background: var(--main-selection-color);
 }
 
 /*Footer*/
@@ -496,7 +501,7 @@ footer a.logo {
   color: var(--main-color);
 }
 
-.footer-mailing input[type='email'] {
+.footer-mailing input[type="email"] {
   margin-right: 12px;
   padding: 0;
 
